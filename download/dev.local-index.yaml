@@ -1,0 +1,24 @@
+apiVersion: v2
+stacks:
+- id: my-nodejs
+  name: Node.js
+  version: 0.2.5
+  description: Runtime for Node.js applications
+  license: Apache-2.0
+  language: nodejs
+  maintainers:
+  - name: Chris Bailey
+    email: cnbailey@gmail.com
+    github-id: seabaylea
+  - name: Neeraj Laad
+    email: neeraj.laad@gmail.com
+    github-id: neeraj-laad
+  default-template: simple
+  src: file:///root/.appsody/stacks/dev.local/my-nodejs.v0.2.5.source.tar.gz
+  templates:
+  - id: simple
+    url: file:///root/.appsody/stacks/dev.local/my-nodejs.v0.2.5.templates.simple.tar.gz
+  requirements:
+    docker-version: '>= 17.09.0'
+    appsody-version: '>= 0.2.7'
+  image: dev.local/appsody/my-nodejs:0.2.5
